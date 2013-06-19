@@ -77,6 +77,7 @@ module ApiMd
             @controller = f['controller']
             @filename = f['controller'] + "_controller.md"
             @path = f['path'].strip
+            @description = f['description']
             @make_params = false
             @make_response = false
 

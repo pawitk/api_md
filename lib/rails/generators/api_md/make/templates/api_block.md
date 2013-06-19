@@ -1,6 +1,6 @@
 ###<%= @path %> {#<%= @path.sub("/","_") %>}
 
-[[SHORT DESCRIPTION]]
+<%= @description %>
 
 - How to use
     1. [[NUMBERED INSTRUCTIONS]]
