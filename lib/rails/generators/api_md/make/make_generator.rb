@@ -91,6 +91,7 @@ module ApiMd
 
             @response = JSON.parse(f['response']) rescue nil
             if @response
+              @response = {"data"=>@response,"success"=>"true","errors"=>"nil"}
               @pretty_response = JSON.pretty_generate(@response).split("\n") rescue nil
               @meta_response = []
               @response.keys.each{ |k| @meta_response << {'param' => k} }
