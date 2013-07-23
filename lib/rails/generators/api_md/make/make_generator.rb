@@ -83,6 +83,7 @@ module ApiMd
 
             @params = JSON.parse(f['params']) rescue nil
             if @params
+              @params = {"auth_token"=>"AUTHTOKEN","data"=>@params}
               @pretty_params = JSON.pretty_generate(@params).split("\n") rescue nil
               @meta_params = []
               @params.keys.each{ |k| @meta_params << {'param' => k} }
@@ -91,7 +92,7 @@ module ApiMd
 
             @response = JSON.parse(f['response']) rescue nil
             if @response
-              @response = {"data"=>@response,"success"=>"true","errors"=>"nil"}
+              @response = {"data"=>@response,"success"=>"true","errors"=>"nil"} # specific to Appximus input format
               @pretty_response = JSON.pretty_generate(@response).split("\n") rescue nil
               @meta_response = []
               @response.keys.each{ |k| @meta_response << {'param' => k} }
