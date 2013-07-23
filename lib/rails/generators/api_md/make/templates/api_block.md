@@ -1,4 +1,4 @@
-###<%= @path.sub("_","\\_") %> {#<%= @path.sub("/","\\_") %>}
+### <%= @path.sub("_","\\_") %> {#<%= @path.sub("/","\\_") %>}
 
 <%= @description %>
 
@@ -7,7 +7,7 @@
 
 <% if @make_params %>
 
-#####Request: POST
+##### Request: POST
 
 <% @pretty_params.each do |p| %><%= "    #{p.to_s.rstrip}" %>
 <% end %>
@@ -23,7 +23,7 @@
 
 <% if @make_response %>
 
-#####Response
+##### Response
 
 <% @pretty_response.each do |p| %><%= "    #{p.to_s}" %>
 <% end %>

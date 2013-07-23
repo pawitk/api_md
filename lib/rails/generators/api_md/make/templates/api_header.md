@@ -1,2 +1,2 @@
-##<%= @controller.camelize %> {#<%= @controller %>_controller}
+## <%= @controller.camelize %> {#<%= @controller %>_controller}
 
